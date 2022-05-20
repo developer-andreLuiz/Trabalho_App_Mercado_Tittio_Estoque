@@ -162,7 +162,7 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Pages
                 {
                     nextPage = true;
                     AnimationBar("Pronto", true);
-                    App.Current.MainPage = new NavigationPage(new LoginPage());
+                    App.Current.MainPage = new LoginPage();
                     return;
                 }
             }

@@ -13,6 +13,13 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainPage : ContentPage
     {
+        private void PushAsyncWithoutDuplicate(Page page)
+        {
+            if (Navigation.NavigationStack[Navigation.NavigationStack.Count - 1].GetType() != page.GetType())
+            {
+                Navigation.PushAsync(page);
+            }
+        }
         public MainPage()
         {
             InitializeComponent();
@@ -23,8 +30,8 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Pages
 
         private async void FrameStoreItemEntry_Tapped(object sender, EventArgs e)
         {
-             await DisplayAlert("Informação", "Entrada Itens", "ok");
-            
+            PushAsyncWithoutDuplicate(new StoreItemEntryPage());
+
         }
         private async void FrameWithdrawalItemsStore_Tapped(object sender, EventArgs e)
         {

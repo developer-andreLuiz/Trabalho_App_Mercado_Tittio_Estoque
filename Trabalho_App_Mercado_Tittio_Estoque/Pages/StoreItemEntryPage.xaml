@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trabalho_App_Mercado_Tittio_Estoque.Pages.StoreItemEntryPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White" Padding="10">
+            <Label Text="Entrada de Itens Loja" HorizontalOptions="Center" FontAttributes="Bold" VerticalOptions="CenterAndExpand"/>
+
+            <Label Text="Scanear Prateleira" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+            <StackLayout Orientation="Horizontal">
+                <Entry  x:Name="entryShelf" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Keyboard="Numeric"/>
+                <Button x:Name="btnScanShelf" Text="Scanear"/>
+            </StackLayout>
+
+            <Label Text="Scanear Produto" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+            <StackLayout Orientation="Horizontal">
+                <Entry  x:Name="entryProduct" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand" Keyboard="Numeric"/>
+                <Button x:Name="btnScanProduct" Text="Scanear" />
+            </StackLayout>
+
+            <Label Text="Validade" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+            <StackLayout>
+                <DatePicker  x:Name="datePickerValidity" BackgroundColor="White"  HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+
+            <Label Text="Insira Quantidade" HorizontalOptions="Start" VerticalOptions="CenterAndExpand"/>
+
+            <Entry  x:Name="entryAmount" HorizontalOptions="FillAndExpand" VerticalOptions="StartAndExpand" Keyboard="Numeric"/>
+            <Button x:Name="btnInsert" Text="Inserir"  Clicked="btnInsert_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

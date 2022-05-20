@@ -41,7 +41,8 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Services
             if (response.IsSuccessStatusCode)
             {
                 string contentReturn = await response.Content.ReadAsStringAsync();
-                return JsonConvert.DeserializeObject<ProductStoreServiceModel>(contentReturn);
+                obj = JsonConvert.DeserializeObject<ProductStoreServiceModel>(contentReturn);
+                return obj;
             }
             return new ProductStoreServiceModel();
         }
