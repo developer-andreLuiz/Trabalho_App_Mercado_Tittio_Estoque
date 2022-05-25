@@ -24,7 +24,7 @@
 
 
 
-	  <item name="android:windowBackground">@drawable/splashscreen1</item>
+	  <item name="android:windowBackground">@drawable/splashscreen_arte</item>
 	  <!-- <item name="android:windowBackground">@drawable/splashscreen</item>-->
 	  <item name="android:windowNoTitle">true</item>
 

@@ -24,6 +24,7 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Pages
         bool employeeVerified = false;
         bool employeeOccupationVerified = false;
         bool productVerified = false;
+        bool productStoreVerified = false;
         bool productBarcodeVerified = false;
         bool storeShelfVerified = false;
 
@@ -54,6 +55,11 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Pages
                 if (productVerified == false)
                 {
                     ProductAsync();
+                    return true;
+                }
+                if (productStoreVerified == false)
+                {
+                    ProductStoreAsync();
                     return true;
                 }
                 if (productBarcodeVerified == false)
@@ -131,6 +137,16 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Pages
                 ProductService service = new ProductService();
                 GlobalHelper.instance.listProduct = await service.GetAll();
                 AnimationBar("Produto", false);
+            }
+        }
+        async Task ProductStoreAsync()
+        {
+            if (internetIsOn)
+            {
+                productStoreVerified = true;
+                ProductStoreService service = new ProductStoreService();
+                GlobalHelper.instance.listProductStore = await service.GetAll();
+                AnimationBar("Produto Loja", false);
             }
         }
         async Task ProductBarcodeAsync()

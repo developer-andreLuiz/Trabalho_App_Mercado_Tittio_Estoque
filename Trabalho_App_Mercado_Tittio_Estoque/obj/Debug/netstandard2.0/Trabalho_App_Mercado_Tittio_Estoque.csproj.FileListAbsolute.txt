@@ -18,3 +18,4 @@ D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque\o
 D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque\obj\Debug\netstandard2.0\refint\Trabalho_App_Mercado_Tittio_Estoque.dll
 D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque\obj\Debug\netstandard2.0\Trabalho_App_Mercado_Tittio_Estoque.pdb
 D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque\obj\Debug\netstandard2.0\ref\Trabalho_App_Mercado_Tittio_Estoque.dll
+D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque\obj\Debug\netstandard2.0\Pages\StoreItemExitPage.xaml.g.cs

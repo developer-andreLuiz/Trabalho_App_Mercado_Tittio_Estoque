@@ -46,5 +46,15 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Services
             }
             return new ProductStoreServiceModel();
         }
+        public async Task Delete(int id)
+        {
+            string data = URL + "/" + id;
+            HttpClient client = GetClient();
+            var response = await client.DeleteAsync(data);
+            if (response.IsSuccessStatusCode)
+            {
+               
+            }
+        }
     }
 }

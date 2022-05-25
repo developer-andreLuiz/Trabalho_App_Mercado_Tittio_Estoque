@@ -1,76 +1,64 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Trabalho_App_Mercado_Tittio_Estoque.Pages.MainPage">
+             x:Class="Trabalho_App_Mercado_Tittio_Estoque.Pages.MainPage"
+              BackgroundImage="background_pages.jpg">
     <ContentPage.Content>
-        <Grid BackgroundColor="White" Padding="10">
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="10*"/>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="10*"/>
+                <RowDefinition Height="45*"/>
+                <RowDefinition Height="45*"/>
             </Grid.RowDefinitions>
-            
-            <Frame Grid.Row="0" Padding="0" >
+
+            <Frame Grid.Row="0" Margin="10,5"  Padding="0" CornerRadius="10" BorderColor="#C1BFBF" HasShadow="True" Opacity="1" >
                 <Grid>
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="10*"/>
-                        <RowDefinition Height="40*"/>
-                        <RowDefinition Height="40*"/>
-                        <RowDefinition Height="10*"/>
+                        <RowDefinition Height="50*"/>
+                        <RowDefinition Height="50*"/>
                     </Grid.RowDefinitions>
-                    
-                    
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="5*"/>
-                        <ColumnDefinition Width="25*"/>
-                        <ColumnDefinition Width="60*"/>
-                    </Grid.ColumnDefinitions>
-                    
-                    <Label Grid.Row="1" Grid.Column="1" Text="Funcionário:" TextColor="Black" FontAttributes="Bold" />
-                    <Label x:Name="lblName" Grid.Row="1" Grid.Column="2" Text="André Luiz da Silva Penha Ferreira" TextColor="Black" FontAttributes="None" />
 
-                    <Label Grid.Row="2" Grid.Column="1" Text="Cargo:" TextColor="Black" FontAttributes="Bold" />
-                    <Label x:Name="lblOccupation" Grid.Row="2" Grid.Column="2" Text="Programador" TextColor="Black" FontAttributes="None" />
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="70*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Row="0" Grid.Column="0" Margin="10,5" Text="Funcionário:" TextColor="Black" FontAttributes="Bold" />
+                    <Label Grid.Row="0" Grid.Column="1" Margin="0,5" x:Name="lblName" Text="André Luiz da Silva Penha Ferreira" HorizontalOptions="Center" TextColor="Black" FontAttributes="None" />
+
+                    <Label Grid.Row="1" Grid.Column="0" Margin="10,0" Text="Cargo:" TextColor="Black" FontAttributes="Bold" />
+                    <Label Grid.Row="1" Grid.Column="1" x:Name="lblOccupation" Text="Programador" HorizontalOptions="Center" TextColor="Black" FontAttributes="None" />
                 </Grid>
             </Frame>
-           
-            <Frame Grid.Row="3" CornerRadius="10" BackgroundColor="Black"  Margin="0" BorderColor="Black" Opacity="1" >
+
+            <Frame Grid.Row="1" CornerRadius="10" Padding="20" BackgroundColor="Black"  Margin="40,270,40,10" BorderColor="Black" Opacity="1" >
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="25*"/>
                         <ColumnDefinition Width="75*"/>
                     </Grid.ColumnDefinitions>
-                    <Image  Grid.Column="0" Source="shelf_add" Aspect="AspectFit" HorizontalOptions="End"/>
-                    <Label Grid.Column="1" Text="Entrada de Itens Loja" TextColor="#52db47" FontSize="20" FontAttributes="None" HorizontalOptions="Start"/>
+                    <Image Grid.Column="0" Source="shelf_add" Aspect="AspectFit" HorizontalOptions="Center"/>
+                    <Label Grid.Column="1" Text="Entrada de Produtos" TextColor="#52db47" FontSize="20" FontAttributes="Bold" VerticalOptions="Center"  HorizontalOptions="Start"/>
                 </Grid>
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="FrameStoreItemEntry_Tapped"/>
                 </Frame.GestureRecognizers>
             </Frame>
-            
-            <Frame Grid.Row="5" CornerRadius="10" BackgroundColor="Black"  Margin="0" BorderColor="Black" Opacity="1" >
+
+            <Frame Grid.Row="2" CornerRadius="10" Padding="20" BackgroundColor="Black"  Margin="40,10,40,270" BorderColor="Black" Opacity="1" >
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="25*"/>
                         <ColumnDefinition Width="75*"/>
                     </Grid.ColumnDefinitions>
-                    <Image  Grid.Column="0" Source="shelf_remove" Aspect="AspectFit" HorizontalOptions="End"/>
-                    <Label Grid.Column="1" Text="Retirada de Itens Loja" TextColor="#e04f5f" FontSize="20" FontAttributes="None" HorizontalOptions="Start"/>
+                    <Image  Grid.Column="0" Source="shelf_remove" Aspect="AspectFit" HorizontalOptions="Center"/>
+                    <Label Grid.Column="1" Text="Retirada de Produtos" TextColor="#e04f5f" FontSize="20" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Start"/>
                 </Grid>
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="FrameWithdrawalItemsStore_Tapped"/>
                 </Frame.GestureRecognizers>
             </Frame>
-            
-           
-
         </Grid>
     </ContentPage.Content>
 </ContentPage>

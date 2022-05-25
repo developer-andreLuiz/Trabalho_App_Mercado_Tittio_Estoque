@@ -1,46 +1,38 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Trabalho_App_Mercado_Tittio_Estoque.Pages.LoginPage">
+             x:Class="Trabalho_App_Mercado_Tittio_Estoque.Pages.LoginPage"
+              BackgroundImage="background_pages.jpg">
     <ContentPage.Content>
-        <Grid BackgroundColor="Black" Padding="10">
+        <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="35*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="5*"/>
                 <RowDefinition Height="10*"/>
+                <RowDefinition Height="5*"/>
                 <RowDefinition Height="10*"/>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="10*"/>
-                <RowDefinition Height="25*"/>
+                <RowDefinition Height="30*"/>
+                
             </Grid.RowDefinitions>
 
-            <Image  Grid.Row="0" Margin="50" Source="logo"/>
+            <Image  Grid.Row="0" Margin="60" Source="logo"/>
 
-            <Label Grid.Row="1" Text="Digite a Senha de Funcionário" VerticalOptions="End" HorizontalOptions="Center" TextColor="White" FontAttributes="Bold"/>
-
-
-            <Frame Grid.Row="2" CornerRadius="10" VerticalOptions="FillAndExpand" Margin="15" Padding="20,0,20,0" BorderColor="White">
-                <Entry x:Name="entryPassword"  MaxLength="8"  HorizontalTextAlignment="Center" Keyboard="Numeric"  TextChanged="entryPassword_TextChanged"/>
+            <Frame Grid.Row="1" BorderColor="#C1BFBF" CornerRadius="10" Margin="60,0" Padding="0">
+                <Label Text="Digite a Senha de Funcionário" VerticalOptions="Center" HorizontalOptions="Center" TextColor="Black" FontAttributes="Bold"/>
             </Frame>
 
-            <Frame x:Name="FrameSignIn" IsVisible="false" Grid.Row="4" CornerRadius="10"  BackgroundColor="#f3a925"  Margin="8" BorderColor="Black" Opacity="1" >
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="25*"/>
-                        <ColumnDefinition Width="50*"/>
-                        <ColumnDefinition Width="25*"/>
-                    </Grid.ColumnDefinitions>
-                    <Label Grid.Column="1" Text="Entrar" TextColor="Black" FontAttributes="Bold" HorizontalOptions="Center"/>
-                </Grid>
+            <Frame Grid.Row="3" CornerRadius="10" Margin="60,10" Padding="10,0" BorderColor="#C1BFBF">
+                <Entry x:Name="entryPassword"  MaxLength="8"  HorizontalTextAlignment="Center" Keyboard="Numeric"  TextChanged="entryPassword_TextChanged" Unfocused="entryPassword_Unfocused"/>
+            </Frame>
+            
+            <Frame Grid.Row="5" x:Name="FrameSignIn" IsVisible="false"  CornerRadius="10" BackgroundColor="Black"  Padding="0" Margin="60,10" BorderColor="Black" Opacity="1" >
+                <Label Text="Entrar" TextColor="White" FontAttributes="Bold" VerticalOptions="Center" HorizontalOptions="Center"/>
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="FrameSignIn_Tapped"/>
                 </Frame.GestureRecognizers>
-                
             </Frame>
-
-
-
-
-
+            
         </Grid>
     </ContentPage.Content>
 </ContentPage>

@@ -53,6 +53,11 @@ D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.A
 D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\drawable\background_load.jpg
 D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\drawable\logo.png
 D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\drawable\splashscreen.jpg
+D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\drawable\shelf.png
+D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\drawable\shelf_remove.png
+D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\drawable\shelf_add.png
+D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\drawable\background_pages.jpg
+D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\drawable\splashscreen_arte.jpg
 D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\mipmap-anydpi-v26\icon_.xml
 D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\mipmap-hdpi\icon_.png
 D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\mipmap-hdpi\icon__adaptive_back.png
@@ -66,10 +71,6 @@ D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.A
 D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\mipmap-xxxhdpi\icon_.png
 D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\mipmap-xxxhdpi\icon__adaptive_back.png
 D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\mipmap-xxxhdpi\icon__adaptive_fore.png
-D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\drawable\shelf.png
-D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\drawable\shelf_remove.png
-D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\drawable\shelf_add.png
-D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\res\drawable\splashscreen1.png
 D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\uploadflags.txt
 D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\resolvedassemblies.hash
 D:\Git\Trabalho_App_Mercado_Tittio_Estoque\Trabalho_App_Mercado_Tittio_Estoque.Android\obj\Debug\120\android\assets\FormsViewGroup.dll

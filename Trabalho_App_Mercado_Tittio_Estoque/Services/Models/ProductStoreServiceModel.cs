@@ -8,6 +8,7 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Services.Models
     {
         public int id { get; set; }
         public int produto { get; set; }
+        public double custoUnitario { get; set; }
         public DateTime entrada { get; set; }
         public DateTime validade { get; set; }
         public int prateleira { get; set; }

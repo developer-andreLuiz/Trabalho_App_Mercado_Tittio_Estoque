@@ -35,7 +35,7 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Pages
         }
         private async void FrameWithdrawalItemsStore_Tapped(object sender, EventArgs e)
         {
-            await DisplayAlert("Informação", "Retirada de Itens", "ok");
+            PushAsyncWithoutDuplicate(new StoreItemExitPage());
         }
     }
 }

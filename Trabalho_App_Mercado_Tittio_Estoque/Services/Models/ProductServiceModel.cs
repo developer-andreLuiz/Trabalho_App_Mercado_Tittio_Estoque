@@ -22,5 +22,6 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Services.Models
         public int volume { get; set; }
         public bool validade { get; set; }
         public string informacao { get; set; }
+        public bool habilitado { get; set; }
     }
 }
