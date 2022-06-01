@@ -20,6 +20,44 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Pages
         int month = 0;
         int year = 0;
         int amount = 0;
+        async void Insert()
+        {
+            ProductStoreServiceModel productStoreServiceModel = new ProductStoreServiceModel();
+
+            productStoreServiceModel.produto = product.id;
+            productStoreServiceModel.custoUnitario = product.custoUnitario;
+            productStoreServiceModel.entrada = DateTime.Now;
+
+            productStoreServiceModel.validade = new DateTime(year, month, day);
+            productStoreServiceModel.prateleira = shelf.id;
+            productStoreServiceModel.quantidade = amount;
+            productStoreServiceModel.funcionario = GlobalHelper.instance.employee.id;
+            productStoreServiceModel.conferenciaValidade = 0;
+            productStoreServiceModel.conferenciaValidade = 0;
+            productStoreServiceModel = await ProductStoreService.instance.Create(productStoreServiceModel);
+            if (productStoreServiceModel.id > 0)
+            {
+                GlobalHelper.instance.listProductStore.Add(productStoreServiceModel);
+                await DisplayAlert("Informação", "Inserido", "ok");
+                shelf = null;
+                product = null;
+                day = 0;
+                month = 0;
+                year = 0;
+                amount = 0;
+                entryShelf.Text = String.Empty;
+                entryProduct.Text = String.Empty;
+                labelProduct.Text = "Produto:";
+                entryDay.Text = String.Empty;
+                entryMonth.Text = String.Empty;
+                entryYear.Text = String.Empty;
+                entryAmount.Text = String.Empty;
+            }
+            else
+            {
+                await DisplayAlert("Erro", "Não Inserido", "ok");
+            }
+        }
         public StoreItemEntryPage()
         {
             InitializeComponent();
@@ -71,6 +109,7 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Pages
                             }
                         }
                     }
+                    entryProduct.Focus();
                 }
             }
             catch { }
@@ -130,6 +169,7 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Pages
                                 }
                             }
                         }
+                        entryDay.Focus();
                     }
                 }
             }
@@ -153,6 +193,7 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Pages
                             return;
                         }
                     }
+                    entryMonth.Focus();
                 }
             }
             catch { }
@@ -177,6 +218,7 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Pages
                             return;
                         }
                     }
+                    entryYear.Focus();
                 }
             }
             catch { }
@@ -202,6 +244,7 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Pages
                         }
                         year += 2000;
                     }
+                    entryAmount.Focus();
                 }
             }
             catch { }
@@ -219,13 +262,39 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Pages
                     {
                         amount = int.Parse(entryAmount.Text.Trim());
                     }
+
+                    if (shelf != null && product != null && day != 0 && month != 0 && month != 0 && amount!=0)
+                    {
+                        Insert();
+                    }
                 }
             }
             catch { }
            
            
         }
-      
+        
+        private void entryDay_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (entryDay.Text.Length == 2)
+            {
+                entryMonth.Focus();
+            }
+        }
+        private void entryMonth_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (entryMonth.Text.Length == 2)
+            {
+                entryYear.Focus();
+            }
+        }
+        private void entryYear_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (entryYear.Text.Length == 2)
+            {
+                entryAmount.Focus();
+            }
+        }
 
 
         private async void frameButtonInsert_Tapped(object sender, EventArgs e)
@@ -260,42 +329,9 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Pages
                 await DisplayAlert("Informação", "Quantidade Invalida", "ok");
                 return;
             }
+            Insert();
 
-            ProductStoreServiceModel productStoreServiceModel = new ProductStoreServiceModel();
 
-            productStoreServiceModel.produto = product.id;
-            productStoreServiceModel.custoUnitario = product.custoUnitario;
-            productStoreServiceModel.entrada = DateTime.Now;
-
-            productStoreServiceModel.validade = new DateTime(year, month, day);
-            productStoreServiceModel.prateleira =shelf.id;
-            productStoreServiceModel.quantidade = amount;
-            productStoreServiceModel.funcionario = GlobalHelper.instance.employee.id;
-            productStoreServiceModel.conferenciaValidade = 0;
-            productStoreServiceModel.conferenciaValidade = 0;
-            productStoreServiceModel = await ProductStoreService.instance.Create(productStoreServiceModel);
-            if (productStoreServiceModel.id > 0)
-            {
-                GlobalHelper.instance.listProductStore.Add(productStoreServiceModel);
-                await DisplayAlert("Informação", "Inserido", "ok");
-                shelf = null;
-                product = null;
-                day = 0;
-                month = 0;
-                year = 0;
-                amount = 0;
-                entryShelf.Text = String.Empty;
-                entryProduct.Text = String.Empty;
-                labelProduct.Text = "Produto:";
-                entryDay.Text = String.Empty;
-                entryMonth.Text = String.Empty;
-                entryYear.Text = String.Empty;
-                entryAmount.Text = String.Empty;
-            }
-            else
-            {
-                await DisplayAlert("Erro", "Não Inserido", "ok");
-            }
         }
         private async void frameButtonClear_Tapped(object sender, EventArgs e)
         {
@@ -319,6 +355,6 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Pages
            
         }
 
-       
+      
     }
 }

@@ -25,6 +25,7 @@
                     <RowDefinition Height="85*"/>
                     <RowDefinition Height="15*"/>
                 </Grid.RowDefinitions>
+                
                 <Frame Grid.Row="0" Margin="15,5" Padding="0" CornerRadius="10" BackgroundColor="White" BorderColor="#C1BFBF" HasShadow="True" Opacity="1">
                 
                     <StackLayout Padding="0,30">
@@ -47,15 +48,15 @@
                             </Grid.RowDefinitions>
                             
                             <Label Grid.Row="0" Grid.Column="0" HorizontalTextAlignment="Center" Text="Dia"/>
-                            <Entry x:Name="entryDay" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" Keyboard="Numeric" MaxLength="2" Unfocused="entryDay_Unfocused"/>
+                            <Entry x:Name="entryDay" Grid.Row="1" Grid.Column="0" HorizontalTextAlignment="Center" Keyboard="Numeric" MaxLength="2" Unfocused="entryDay_Unfocused" TextChanged="entryDay_TextChanged"/>
 
 
                             <Label Grid.Row="0" Grid.Column="1" HorizontalTextAlignment="Center" Text="Mês"/>
-                            <Entry x:Name="entryMonth" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" Keyboard="Numeric" MaxLength="2" Unfocused="entryMonth_Unfocused"/>
+                            <Entry x:Name="entryMonth" Grid.Row="1" Grid.Column="1" HorizontalTextAlignment="Center" Keyboard="Numeric" MaxLength="2" Unfocused="entryMonth_Unfocused" TextChanged="entryMonth_TextChanged"/>
 
                             
                             <Label Grid.Row="0" Grid.Column="2" HorizontalTextAlignment="Center" Text="Ano"/>
-                            <Entry x:Name="entryYear" Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center" Keyboard="Numeric" MaxLength="2" Unfocused="entryYear_Unfocused"/>
+                            <Entry x:Name="entryYear" Grid.Row="1" Grid.Column="2" HorizontalTextAlignment="Center" Keyboard="Numeric" MaxLength="2" Unfocused="entryYear_Unfocused" TextChanged="entryYear_TextChanged"/>
                           
                         </Grid>
 

@@ -107,5 +107,7 @@ namespace Trabalho_App_Mercado_Tittio_Estoque.Pages
             }
             catch { }
         }
+
+       
     }
 }
