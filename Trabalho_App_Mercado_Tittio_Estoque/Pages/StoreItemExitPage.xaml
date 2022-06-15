@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Trabalho_App_Mercado_Tittio_Estoque.Pages.StoreItemExitPage"
+             BackgroundImage="background_pages.jpg">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10*"/>
+                <RowDefinition Height="90*"/>
+            </Grid.RowDefinitions>
+            <Frame Grid.Row="0" Margin="15,10,15,0"  Padding="10" CornerRadius="10" BackgroundColor="Black" BorderColor="#C1BFBF" HasShadow="True" Opacity="1" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="30*"/>
+                        <ColumnDefinition Width="70*"/>
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.Column="0" Source="shelf_remove" Aspect="AspectFit" HorizontalOptions="Center"/>
+                    <Label Grid.Column="1" Text="Retirada de Produtos" TextColor="#e04f5f" FontSize="20" FontAttributes="Bold" VerticalOptions="Center"  HorizontalOptions="Start"/>
+                </Grid>
+            </Frame>
+
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="85*"/>
+                    <RowDefinition Height="15*"/>
+                </Grid.RowDefinitions>
+                <Frame Grid.Row="0" Margin="15,5" Padding="0" CornerRadius="10" BackgroundColor="White" BorderColor="#C1BFBF" HasShadow="True" Opacity="1">
+
+                    <StackLayout Padding="0,30">
+
+                        <Entry x:Name="entryShelf" Placeholder="Código Prateleira" HorizontalTextAlignment="Start" Margin="15,30" Keyboard="Numeric" MaxLength="13" Unfocused="entryShelf_Unfocused"/>
+
+                        <Entry x:Name="entryProduct" Placeholder="Código Barra Produto" HorizontalTextAlignment="Start" Margin="15,30,15,0" Keyboard="Numeric" Unfocused="entryProduct_Unfocused"/>
+
+                        <Label x:Name="labelProduct" Text="Produto:" Margin="20,0,15,15" TextColor="Red" FontAttributes="Bold"/>
+
+                      
+                    </StackLayout>
+                </Frame>
+
+                <Grid Grid.Row="1" Margin="15,0,15,15">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="70*"/>
+                        <ColumnDefinition Width="30*"/>
+                    </Grid.ColumnDefinitions>
+
+
+                    <Frame x:Name="frameButtonRemove" Grid.Column="0" CornerRadius="10" BackgroundColor="Red" BorderColor="Black" HasShadow="True" Opacity="1" >
+                        <Label Text="Estornar" TextColor="White" FontSize="20" FontAttributes="Bold" VerticalOptions="Center"  HorizontalOptions="Center"/>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="frameButtonRemove_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                    <Frame x:Name="frameButtonClear" Grid.Column="1" CornerRadius="10" BackgroundColor="Black" BorderColor="Black" HasShadow="True" Opacity="1" >
+                        <Label Text="Limpar" TextColor="White" FontSize="20" FontAttributes="Bold" VerticalOptions="Center"  HorizontalOptions="Center"/>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="frameButtonClear_Tapped"/>
+                        </Frame.GestureRecognizers>
+                    </Frame>
+                </Grid>
+
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
